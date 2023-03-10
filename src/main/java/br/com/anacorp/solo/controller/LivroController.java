@@ -19,6 +19,11 @@ public class LivroController {
 	@Autowired
 	private LivroRepo repo;
 	
+	@GetMapping("/")
+	public String sayHello() {
+		return "Bem vindo ao repositorio de Livros";
+	}
+	
 	@GetMapping("/livros")
 	public ArrayList<Livro> recuperarTodos(){
 		ArrayList<Livro> lista;
